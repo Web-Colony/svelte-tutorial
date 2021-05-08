@@ -2,6 +2,8 @@
 import {
     createEventDispatcher
 } from "svelte"
+import Button from "../units/Button.svelte";
+
 const dispatch = createEventDispatcher();
 
 let fields = {
@@ -30,7 +32,7 @@ const onSubmit = () => {
         <label for="answer-b">Answer B:</label>
         <input type="text" id="answer-b" bind:value={fields.answerB} />
     </div>
-    <button class="btn"> Add </button>
+    <Button> Add Poll </Button>
 
 </form>
 
@@ -42,7 +44,14 @@ form {
     justify-content: center;
 }
 
-.form-field {}
+.form-field {
+    margin: 10px auto;
+}
+
+input {
+    width: 100%;
+    border-radius: 6px;
+}
 
 label {
     padding-bottom: 10px;
